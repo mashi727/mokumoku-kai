@@ -1,0 +1,7 @@
+__pycache__
+.password
+.DS_Store
+test.py
+*.csv
+blood_data.db
+sample

@@ -1,0 +1,26 @@
+import openrouteservice as ors
+import folium
+
+key = "5b3ce3597851110001cf6248910e5ccae6044498b1072e79ad95659e"
+client = ors.Client(key=key)
+
+
+m = folium.Map(location=[52.521861, 13.40744], tiles='cartodbpositron', zoom_start=13)
+
+# Some coordinate in Berlin
+coordinate = [[13.384116, 52.533558]]
+
+iso = client.isochrones(
+    locations=coordinate,
+    profile='foot-walking',
+    range=[600, 1200],
+    validate=False,
+    attributes=['total_pop']
+)
+
+# Also create a Popup with Population count within isochrones
+for isochrone in iso['features']:
+    folium.Polygon(locations=[list(reversed(coord)) for coord in isochrone['geometry']['coordinates'][0]],
+                  fill='00ff00',
+                  popup=folium.Popup("Population: {} people".format(isochrone['properties']['total_pop'])),
+                  opacity=0.5).add_to(m)

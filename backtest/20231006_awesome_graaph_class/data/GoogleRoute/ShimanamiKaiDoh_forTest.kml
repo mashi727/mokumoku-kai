@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>広島県尾道市東御所町１ 尾道駅 から 愛媛県今治市北宝来町１丁目 今治駅 へのルート</name>
+    <Style id="icon-1899-DB4436-nodesc-normal">
+      <IconStyle>
+        <color>ff3644db</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-DB4436-nodesc-highlight">
+      <IconStyle>
+        <color>ff3644db</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-DB4436-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-DB4436-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-DB4436-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-1267FF-5000-nodesc-normal">
+      <LineStyle>
+        <color>ffff6712</color>
+        <width>5</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="line-1267FF-5000-nodesc-highlight">
+      <LineStyle>
+        <color>ffff6712</color>
+        <width>7.5</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="line-1267FF-5000-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-1267FF-5000-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-1267FF-5000-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Placemark>
+      <name>広島県尾道市東御所町１ 尾道駅 から 愛媛県今治市北宝来町１丁目 今治駅 へのルート</name>
+      <styleUrl>#line-1267FF-5000-nodesc</styleUrl>
+      <LineString>
+        <tessellate>1</tessellate>
+        <coordinates>
+          133.07333,34.2611,0
+          133.07322,34.26108,0
+          133.07313,34.26105,0
+          133.07311,34.26108,0
+          133.07307,34.26112,0
+          133.07302,34.26114,0
+          133.07298,34.26115,0
+          133.07286,34.26115,0
+          133.07278,34.26114,0
+          133.07272,34.26114,0
+          133.07235,34.26109,0
+          133.07188,34.261,0
+          133.07183,34.261,0
+          133.07157,34.26095,0
+          133.0712,34.2609,0
+          133.07106,34.26087,0
+          133.07079,34.26077,0
+          133.07065,34.26073,0
+          133.06946,34.2605,0
+          133.06944,34.2605,0
+          133.06435,34.25954,0
+          133.06432,34.25954,0
+          133.06116,34.25895,0
+          133.06113,34.25894,0
+          133.06095,34.25891,0
+          133.06088,34.25889,0
+          133.06078,34.25888,0
+          133.06074,34.25887,0
+          133.06058,34.25886,0
+          133.06052,34.25885,0
+          133.06045,34.25885,0
+          133.05734,34.25828,0
+          133.05729,34.25828,0
+          133.05691,34.25821,0
+          133.05685,34.25819,0
+          133.05672,34.25817,0
+        </coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>広島県尾道市東御所町１ 尾道駅</name>
+      <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          133.1932399,34.4046167,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>愛媛県今治市上浦町井口５７３３ 料理旅館 富士見園</name>
+      <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          133.0418781,34.2652676,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>愛媛県今治市玉川町鈍川 美賀登</name>
+      <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          132.9364594,33.9821853,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>愛媛県今治市北宝来町１丁目 今治駅</name>
+      <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          132.9938299,34.0644708,0
+        </coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>
