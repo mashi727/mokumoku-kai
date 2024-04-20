@@ -151,8 +151,8 @@ class MainWindow(QMainWindow):
         self.Ui_MainWindow.setWindowTitle("Awesome Visualization TOOL")
 
         width, height = get_screensize()
-        if width > 1920 and height > 1080:
-            self.Ui_MainWindow.setGeometry(0, 0, 1024, 768) # WQXGA (Wide-QXGA)
+        if width > 1920 and height > 1200:
+            self.Ui_MainWindow.setGeometry(0, 0, 1920, 1080) # WQXGA (Wide-QXGA)
         else:
             self.Ui_MainWindow.setGeometry(0, 0, 1024, 768) # WQXGA (Wide-QXGA)
 
