@@ -152,9 +152,9 @@ class MainWindow(QMainWindow):
 
         width, height = get_screensize()
         if width > 1920 and height > 1080:
-            self.Ui_MainWindow.setGeometry(0, 0, 1920, 1080) # WQXGA (Wide-QXGA)
+            self.Ui_MainWindow.setGeometry(0, 0, 1920*0.5, 1080*0.5) # WQXGA (Wide-QXGA)
         else:
-            self.Ui_MainWindow.setGeometry(0, 0, width*0.9, height*0.9) # WQXGA (Wide-QXGA)
+            self.Ui_MainWindow.setGeometry(0, 0, width*0.5, height*0.5) # WQXGA (Wide-QXGA)
 
 
         # ボタン操作
@@ -162,14 +162,6 @@ class MainWindow(QMainWindow):
         self.Ui_MainWindow.btnFin.setStyleSheet("QPushButton:checked{background-color: rgb(100, 200, 0)}")
         self.Ui_MainWindow.btnAnalytic.clicked.connect(lambda:self.pltAnalytic())
         self.Ui_MainWindow.btnAnalytic.setStyleSheet("QPushButton:checked{background-color: rgb(100, 200, 0)}")
-        self.Ui_MainWindow.btnMyData.clicked.connect(lambda:self.pltMyData())
-        self.Ui_MainWindow.btnMyData.setStyleSheet("QPushButton:checked{background-color: rgb(100, 200, 0)}")
-        self.Ui_MainWindow.btnProtoType.clicked.connect(lambda:self.pltProtoType())
-        self.Ui_MainWindow.btnProtoType.setStyleSheet("QPushButton:checked{background-color: rgb(100, 200, 0)}")
-        self.Ui_MainWindow.btnMatplt.clicked.connect(lambda:self.pltMatplt())
-        self.Ui_MainWindow.btnMatplt.setStyleSheet("QPushButton:checked{background-color: rgb(100, 200, 0)}")
-        self.Ui_MainWindow.btnDash.clicked.connect(lambda:self.pltDash())
-        self.Ui_MainWindow.btnDash.setStyleSheet("QPushButton:checked{background-color: rgb(100, 200, 0)}")
 
         self.Ui_MainWindow.plotButton.clicked.connect(lambda:DataViz.load_model(self))
 
