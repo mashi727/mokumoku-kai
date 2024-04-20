@@ -152,9 +152,9 @@ class MainWindow(QMainWindow):
 
         width, height = get_screensize()
         if width > 1920 and height > 1080:
-            self.Ui_MainWindow.setGeometry(0, 0, 1280, 768) # WQXGA (Wide-QXGA)
+            self.Ui_MainWindow.setGeometry(0, 0, 1024, 768) # WQXGA (Wide-QXGA)
         else:
-            self.Ui_MainWindow.setGeometry(0, 0, 1280, 768) # WQXGA (Wide-QXGA)
+            self.Ui_MainWindow.setGeometry(0, 0, 1024, 768) # WQXGA (Wide-QXGA)
 
 
         # ボタン操作
