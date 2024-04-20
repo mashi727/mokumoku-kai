@@ -127,14 +127,34 @@ class FilePath:
     data_filename: str
 
 
+import platform
+osname = platform.system()
+def get_screensize():
+    if osname == 'Darwin':
+        from screeninfo import get_monitors
+        for monitor in get_monitors():
+            width = monitor.width
+            height = monitor.height
+        return width, height
+    elif osname == 'Windows':
+        import ctypes
+        user32 = ctypes.windll.user32
+        screensize = user32.GetSystemMetrics(0), user32.GetSystemMetrics(1)
+        return screensize[0], screensize[1]
 
 class MainWindow(QMainWindow):
     def __init__(self, parent = None):
         super(MainWindow, self).__init__(parent)
         # QUiLoaderで.uiファイルを読み込む
+        
         self.Ui_MainWindow = QtUiTools.QUiLoader().load("./dataviz_ui.ui")
         self.Ui_MainWindow.setWindowTitle("Awesome Visualization TOOL")
-        self.Ui_MainWindow.setGeometry(0, 0, 1920, 1080) # WQXGA (Wide-QXGA)
+
+        width, height = get_screensize()
+        if width > 1920 and height > 1080:
+            self.Ui_MainWindow.setGeometry(0, 0, 1920, 1080) # WQXGA (Wide-QXGA)
+        else:
+            self.Ui_MainWindow.setGeometry(0, 0, width*0.9, height*0.9) # WQXGA (Wide-QXGA)
 
 
         # ボタン操作
