@@ -134,7 +134,7 @@ class MainWindow(QMainWindow):
         # QUiLoaderで.uiファイルを読み込む
         self.Ui_MainWindow = QtUiTools.QUiLoader().load("./dataviz_ui.ui")
         self.Ui_MainWindow.setWindowTitle("Awesome Visualization TOOL")
-        self.Ui_MainWindow.setGeometry(50, 50, 1920, 1080) # WQXGA (Wide-QXGA)
+        self.Ui_MainWindow.setGeometry(0, 0, 1920, 1080) # WQXGA (Wide-QXGA)
 
 
         # ボタン操作
