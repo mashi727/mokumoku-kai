@@ -164,7 +164,7 @@ class MainWindow(QMainWindow):
 
         if osname == 'Darwin':
             font = QFont()
-            font.setPointSize(14)
+            font.setPointSize(18)
             font1 = QFont()
             font1.setPointSize(14)
             font2 = QFont()
@@ -194,15 +194,15 @@ class MainWindow(QMainWindow):
         elif osname == 'Windows':
 
             font = QFont()
-            font.setPointSize(10)
+            font.setPointSize(14)
             font1 = QFont()
-            font1.setPointSize(10)
+            font1.setPointSize(14)
             font2 = QFont()
-            font2.setPointSize(10)
+            font2.setPointSize(14)
             font3 = QFont()
             font3.setPointSize(10)
             font4 = QFont()
-            font4.setPointSize(10)
+            font4.setPointSize(14)
             font5 = QFont()
             font5.setPointSize(14)
             font6 = QFont()
