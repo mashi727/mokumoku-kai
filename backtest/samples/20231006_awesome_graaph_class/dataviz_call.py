@@ -4,6 +4,7 @@ from PySide6 import QtCore, QtWidgets, QtUiTools
 from PySide6.QtWidgets import QApplication, QMainWindow, QFileDialog, QVBoxLayout, QPushButton
 from PySide6.QtWidgets import QTableView
 import dash
+from PySide6.QtGui import QFont
 from dash import dcc
 from dash import html
 import sqlite3
@@ -142,6 +143,9 @@ def get_screensize():
         screensize = user32.GetSystemMetrics(0), user32.GetSystemMetrics(1)
         return screensize[0], screensize[1]
 
+
+
+
 class MainWindow(QMainWindow):
     def __init__(self, parent = None):
         super(MainWindow, self).__init__(parent)
@@ -150,11 +154,72 @@ class MainWindow(QMainWindow):
         self.Ui_MainWindow = QtUiTools.QUiLoader().load("./dataviz_ui.ui")
         self.Ui_MainWindow.setWindowTitle("Awesome Visualization TOOL")
 
+
+        osname = platform.system()
         width, height = get_screensize()
         if width > 1920 and height > 1200:
             self.Ui_MainWindow.setGeometry(0, 0, 1920, 1080) # WQXGA (Wide-QXGA)
         else:
             self.Ui_MainWindow.setGeometry(0, 0, 1024, 768) # WQXGA (Wide-QXGA)
+
+        if osname == 'Darwin':
+            font = QFont()
+            font.setPointSize(14)
+            font1 = QFont()
+            font1.setPointSize(14)
+            font2 = QFont()
+            font2.setPointSize(14)
+            font3 = QFont()
+            font3.setPointSize(14)
+            font4 = QFont()
+            font4.setPointSize(14)
+            font5 = QFont()
+            font5.setPointSize(14)
+            font6 = QFont()
+            font6.setPointSize(14)
+            self.Ui_MainWindow.btnFin.setFont(font)
+            self.Ui_MainWindow.btnMyData.setFont(font)
+            self.Ui_MainWindow.btnAnalytic.setFont(font)
+            self.Ui_MainWindow.label_2.setFont(font1)
+            self.Ui_MainWindow.treeView.setFont(font2)
+            self.Ui_MainWindow.label.setFont(font1)
+            self.Ui_MainWindow.treeViewData.setFont(font2)
+            self.Ui_MainWindow.label_3.setFont(font3)
+            self.Ui_MainWindow.codeView.setFont(font4)
+            self.Ui_MainWindow.label_4.setFont(font5)
+            self.Ui_MainWindow.lineNum.setFont(font6)
+            self.Ui_MainWindow.plotButton.setFont(font5)
+            self.Ui_MainWindow.quitButton.setFont(font5)
+
+        elif osname == 'Windows':
+
+            font = QFont()
+            font.setPointSize(12)
+            font1 = QFont()
+            font1.setPointSize(12)
+            font2 = QFont()
+            font2.setPointSize(12)
+            font3 = QFont()
+            font3.setPointSize(12)
+            font4 = QFont()
+            font4.setPointSize(12)
+            font5 = QFont()
+            font5.setPointSize(12)
+            font6 = QFont()
+            font6.setPointSize(12)
+            self.Ui_MainWindow.btnFin.setFont(font)
+            self.Ui_MainWindow.btnMyData.setFont(font)
+            self.Ui_MainWindow.btnAnalytic.setFont(font)
+            self.Ui_MainWindow.label_2.setFont(font1)
+            self.Ui_MainWindow.treeView.setFont(font2)
+            self.Ui_MainWindow.label.setFont(font1)
+            self.Ui_MainWindow.treeViewData.setFont(font2)
+            self.Ui_MainWindow.label_3.setFont(font3)
+            self.Ui_MainWindow.codeView.setFont(font4)
+            self.Ui_MainWindow.label_4.setFont(font5)
+            self.Ui_MainWindow.lineNum.setFont(font6)
+            self.Ui_MainWindow.plotButton.setFont(font5)
+            self.Ui_MainWindow.quitButton.setFont(font5)
 
 
         # ボタン操作
