@@ -444,13 +444,13 @@
             <property name="minimumSize">
              <size>
               <width>40</width>
-              <height>80</height>
+              <height>60</height>
              </size>
             </property>
             <property name="maximumSize">
              <size>
               <width>120</width>
-              <height>80</height>
+              <height>60</height>
              </size>
             </property>
             <property name="font">
@@ -475,13 +475,13 @@
             <property name="minimumSize">
              <size>
               <width>40</width>
-              <height>80</height>
+              <height>60</height>
              </size>
             </property>
             <property name="maximumSize">
              <size>
               <width>120</width>
-              <height>80</height>
+              <height>60</height>
              </size>
             </property>
             <property name="font">
