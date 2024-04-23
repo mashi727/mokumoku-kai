@@ -7,7 +7,7 @@ import datetime
 
 ticker_symbol_Book = ['AAPL','MSFT','INTC','IBM','WFC','USB','MMM','UNP','CAT','EMR','HD','MCD','XOM','CVX','CVX','PG','KO','PEP','PM','MO','WMT','CL','MOLZ','KHC','JNJ','ABBV','AMGN','ABT','T','VZ','SO']
 
-ticker_symbol_as_of_20231008 = ['WMT','KO','MO','PM','PG','JNJ','BMY','VZ','MCD','XOM','SPYD','AGG']
+ticker_symbol_as_of_20231008 = ['WMT','KO','MO','PM','PG','JNJ','BMY','VZ','MCD','XOM','SPYD','AGG', 'SPX']
 
 
 ticker_symbol = list(set(ticker_symbol_Book) | set(ticker_symbol_as_of_20231008))
@@ -55,20 +55,30 @@ class Data():
     span_yh :str = '60m'
 
 
+import sys
+
+args = sys.argv
+
+print(args[1])
+
+
 import yfinance
-def fetch_from_yahoo(ticker_symbol, span):
+def fetch_from_yahoo(ticker_symbol, date):
     df = yfinance.download(
+        start=date,
         tickers=ticker_symbol, # ナスダック100指数
-        period='730 days',
-        interval=span,
+        period='1d',
+        interval='1m',
     )
     df.index.name = 'date'
     return df
 
+    #data = yf.download("TSLA", start='2024-04-19', period='1d', interval="1m")
+
+
 import time
 for ts in ticker_symbol:
-    df_av = fetch_from_av(ts, '1min')
-    df_av.to_csv('./data/'+d+'_'+ts+'_1min_av'+'.csv', header=True, index=True)
-    #df_yahoo = fetch_from_yahoo(ts, Data.span_yh)
-    #df_yahoo.to_csv('./data/'+d+'_'+ts+'_'+Data.span_yh+'_yf'+'.csv', header=True, index=True)
+    day = args[1]
+    df_yahoo = fetch_from_yahoo(ts, day)
+    df_yahoo.to_csv('./data/'+day+'_'+ts+'_1min_yf'+'.csv', header=True, index=True)
     time.sleep(1)

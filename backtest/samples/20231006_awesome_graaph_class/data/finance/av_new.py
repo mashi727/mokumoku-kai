@@ -29,18 +29,17 @@ now = datetime.datetime.now(JST)
 d = now.strftime('%Y%m%d%H%M%S')
 
 
-import yfinance as yf
-
 def fetch_from_av(ticker_symbol, span):
     # 四本値を取ってくる。
     from alpha_vantage.techindicators import TechIndicators
-    symbol=ticker_symbol[0]
+    
+    #symbol=ticker_symbol[0]
     from alpha_vantage.timeseries import TimeSeries
     ts = TimeSeries(key='0A5DAC7F3S5UWRJZ', output_format='pandas')
     if span == 'Daily':
-        data, meta_data = ts.get_daily(symbol=symbol,outputsize='full')
+        data, meta_data = ts.get_daily(symbol=ticker_symbol,outputsize='full')
     else:
-        data, meta_data = ts.get_intraday(symbol=symbol,interval=span, outputsize='full')
+        data, meta_data = ts.get_intraday(symbol=ticker_symbol,interval=span, outputsize='full')
     # 行名を変更する。
     df = data.rename(columns={'1. open': 'Open', '2. high': 'High', '3. low':'Low','4. close':'Close', '5. volume':'Volume'})
     df = df.sort_index(axis=0, level=None, ascending=True)
@@ -54,21 +53,21 @@ class Data():
     # yahooFin [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 1d, 5d, 1wk, 1mo, 3mo]
     span_yh :str = '60m'
 
+print(fetch_from_av('AAPL','1min'))
 
-import yfinance
-def fetch_from_yahoo(ticker_symbol, span):
-    df = yfinance.download(
-        tickers=ticker_symbol, # ナスダック100指数
-        period='730 days',
-        interval=span,
-    )
-    df.index.name = 'date'
-    return df
 
+'''
 import time
 for ts in ticker_symbol:
-    df_av = fetch_from_av(ts, '1min')
-    df_av.to_csv('./data/'+d+'_'+ts+'_1min_av'+'.csv', header=True, index=True)
-    #df_yahoo = fetch_from_yahoo(ts, Data.span_yh)
-    #df_yahoo.to_csv('./data/'+d+'_'+ts+'_'+Data.span_yh+'_yf'+'.csv', header=True, index=True)
+    try:
+        print(ts) # あああ　は文字列変数を指定していなければ"(ダブルクォート）で囲む必要がある。
+        df_av = fetch_from_av(ts, '1min')
+        df_av.to_csv('./data/'+d+'_'+ts+'_1min_av'+'.csv', header=True, index=True)
+    except Exception as e:
+        print(ts, 'Error!')
+        import traceback
+        with open('error.log', 'a') as f:
+            traceback.print_exc( file=f)
     time.sleep(1)
+    continue
+'''
