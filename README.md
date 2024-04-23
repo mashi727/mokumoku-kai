@@ -6,12 +6,41 @@
 フォルダの整理を行いました。
 
 ### フォルダやファイルを追加する際のポリシー
+
 - プロトタイピングやテストコードは`small_works`にフォルダを作成して入れるようにしましょう。
 - フォルダを作成した際は、目的などを記述したREADME.mdを作成してください。
-- 
+- 実際に運用するツールは、portfolioにフォルダを作成して格納します。
+
+#### 現在のフォルダ構成
+
+フォルダの構成は、以下の通り。
+<details><summary>フォルダ構成</summary>
+
+```sh
+.
+├── Learning
+│   └── Books
+├── old
+│   ├── 20231006_awesome_graaph_class
+│   ├── backtest_old
+│   └── backtest_samples_from_pypi
+├── portfolio
+└── small_works
+    ├── convert_one-min_to_any-min
+    ├── convert_one-min_to_volume
+    ├── hdf5_test
+    └── reliability_test_for_stockdata
+
+13 directories
+```
+
+</details>
 
 
-### stockデータ検証（reliability_test_for_stockdata）
+### Action Item
+
+
+#### stockデータ検証（reliability_test_for_stockdata）
 
 stockデータは、Alpha VantageとYahoo Financeから行なっています。
 現在の方針は、1min足を収集、記録して、任意の足（5min, 60min, 1dayなど）は1min足から計算する方向を検討しています。
@@ -26,7 +55,7 @@ Alpha Vantageは、1ヶ月分のデータを収集可能ですが1日25回まで
 
 
 
-### 1min足から、任意の足を作成
+#### 1min足から、任意の足を作成
 
 これも、検証が必要です。
 リサンプルで、5min足へ変換するコードをネットで拾ってきましたが。
@@ -43,28 +72,20 @@ df_five["Low"] = df_one["Low"].resample(rule).min()
 ```
 
 
+#### データの保存について(hdf5_test)
 
-フォルダの構成は、以下の通り。
-<details><summary>フォルダ構成</summary>
+データの保存は悩ましいところです。
+方法としては、SQLを使用してデータベースを作成する方法と、`hdf5`を利用する方法があります。
+現状は、最も遅く煩雑になりやすい`csv`でフォルダ管理を行なっています。
 
-```sh
-├── Learning
-│   └── Books
-├── old
-│   ├── 20231006_awesome_graaph_class
-│   ├── backtest_old
-│   └── backtest_samples_from_pypi
-├── portfolio
-├── small_works
-│   ├── hdf5_test
-│   └── reliability_test_for_stockdata
-└── test_programs
-    └── pygtgraph_test
+現時点での結論としては、`hdf5`を使用する方向でテストを行います。
 
-13 directories
-```
+理由は、以下の通り。
 
-</details>
+- 一つのファイルで構造データを管理できる。
+    - 興味のある企業ごとにStock dataと財務諸表などのファンダメンタルデータを保存する必要があるため必須。
+- 高速である。（要検証）
+- 学術分野における大容量データの扱い（MLなど）において実績がある。
 
 
 
