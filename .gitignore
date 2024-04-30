@@ -1,5 +1,5 @@
 *.ipynb
 .alpha_vantage_apikey 
 .ipynb_checkpoints
-Learning
+Learning/Books
 .DS_Store
