@@ -2,3 +2,4 @@
 .alpha_vantage_apikey 
 .ipynb_checkpoints
 Learning
+.DS_Store
