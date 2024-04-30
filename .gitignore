@@ -3,3 +3,4 @@
 .ipynb_checkpoints
 Learning/Books
 .DS_Store
+*.pyc
