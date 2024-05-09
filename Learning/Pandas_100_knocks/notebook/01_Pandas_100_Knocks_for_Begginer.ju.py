@@ -23,18 +23,23 @@ import pandas as pd
 import glob
 
 from pandas.core.frame import signature
+# %%
+
 
 #題材データをdfに読み込み(タイタニック号の乗客データ、テストの点数データ 等)
 def initialize1():
     df = pd.read_csv('../input/titanic3.csv')
     return df
 
+
 def initialize2():
     df = pd.read_csv('../input/data1.csv')
     return df
 
-#df = initialize1()
-df = pd.read_csv('./titanic3.csv')
+df = initialize1()
+#df = pd.read_csv('./titanic3.csv')
+
+
 
 # %%
 df2 = initialize2()

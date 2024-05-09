@@ -126,3 +126,94 @@ Traceback (most recent call last):
   File "/Users/mashi/.venv/lib/python3.11/site-packages/alpha_vantage/alphavantage.py", line 361, in _handle_api_call
     raise ValueError(json_response["Information"])
 ValueError: Thank you for using Alpha Vantage! Our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.
+Traceback (most recent call last):
+  File "/Users/mashi/Dropbox/00_works/git/mokumoku-kai/small_works/reliability_test_for_stockdata/av_new.py", line 64, in <module>
+    df_av = fetch_from_av(ts, '1min')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mashi/Dropbox/00_works/git/mokumoku-kai/small_works/reliability_test_for_stockdata/av_new.py", line 34, in fetch_from_av
+    from alpha_vantage.techindicators import TechIndicators
+ModuleNotFoundError: No module named 'alpha_vantage'
+Traceback (most recent call last):
+  File "/Users/mashi/Dropbox/00_works/git/mokumoku-kai/small_works/reliability_test_for_stockdata/av_new.py", line 64, in <module>
+    df_av = fetch_from_av(ts, '1min')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mashi/Dropbox/00_works/git/mokumoku-kai/small_works/reliability_test_for_stockdata/av_new.py", line 34, in fetch_from_av
+    from alpha_vantage.techindicators import TechIndicators
+ModuleNotFoundError: No module named 'alpha_vantage'
+Traceback (most recent call last):
+  File "/Users/mashi/Dropbox/00_works/git/mokumoku-kai/small_works/reliability_test_for_stockdata/av_new.py", line 64, in <module>
+    df_av = fetch_from_av(ts, '1min')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mashi/Dropbox/00_works/git/mokumoku-kai/small_works/reliability_test_for_stockdata/av_new.py", line 34, in fetch_from_av
+    from alpha_vantage.techindicators import TechIndicators
+ModuleNotFoundError: No module named 'alpha_vantage'
+Traceback (most recent call last):
+  File "/Users/mashi/Dropbox/00_works/git/mokumoku-kai/small_works/reliability_test_for_stockdata/av_new.py", line 64, in <module>
+    df_av = fetch_from_av(ts, '1min')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mashi/Dropbox/00_works/git/mokumoku-kai/small_works/reliability_test_for_stockdata/av_new.py", line 34, in fetch_from_av
+    from alpha_vantage.techindicators import TechIndicators
+ModuleNotFoundError: No module named 'alpha_vantage'
+Traceback (most recent call last):
+  File "/Users/mashi/Dropbox/00_works/git/mokumoku-kai/small_works/reliability_test_for_stockdata/av_new.py", line 64, in <module>
+    df_av = fetch_from_av(ts, '1min')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mashi/Dropbox/00_works/git/mokumoku-kai/small_works/reliability_test_for_stockdata/av_new.py", line 34, in fetch_from_av
+    from alpha_vantage.techindicators import TechIndicators
+ModuleNotFoundError: No module named 'alpha_vantage'
+Traceback (most recent call last):
+  File "/Users/mashi/Dropbox/00_works/git/mokumoku-kai/small_works/reliability_test_for_stockdata/av_new.py", line 64, in <module>
+    df_av = fetch_from_av(ts, '1min')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mashi/Dropbox/00_works/git/mokumoku-kai/small_works/reliability_test_for_stockdata/av_new.py", line 34, in fetch_from_av
+    from alpha_vantage.techindicators import TechIndicators
+ModuleNotFoundError: No module named 'alpha_vantage'
+Traceback (most recent call last):
+  File "/Users/mashi/Dropbox/00_works/git/mokumoku-kai/small_works/reliability_test_for_stockdata/av_new.py", line 64, in <module>
+    df_av = fetch_from_av(ts, '1min')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mashi/Dropbox/00_works/git/mokumoku-kai/small_works/reliability_test_for_stockdata/av_new.py", line 34, in fetch_from_av
+    from alpha_vantage.techindicators import TechIndicators
+ModuleNotFoundError: No module named 'alpha_vantage'
+Traceback (most recent call last):
+  File "/Users/mashi/Dropbox/00_works/git/mokumoku-kai/small_works/reliability_test_for_stockdata/av_new.py", line 64, in <module>
+    df_av = fetch_from_av(ts, '1min')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mashi/Dropbox/00_works/git/mokumoku-kai/small_works/reliability_test_for_stockdata/av_new.py", line 34, in fetch_from_av
+    from alpha_vantage.techindicators import TechIndicators
+ModuleNotFoundError: No module named 'alpha_vantage'
+Traceback (most recent call last):
+  File "/Users/mashi/Dropbox/00_works/git/mokumoku-kai/small_works/reliability_test_for_stockdata/av_new.py", line 64, in <module>
+    df_av = fetch_from_av(ts, '1min')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mashi/Dropbox/00_works/git/mokumoku-kai/small_works/reliability_test_for_stockdata/av_new.py", line 34, in fetch_from_av
+    from alpha_vantage.techindicators import TechIndicators
+ModuleNotFoundError: No module named 'alpha_vantage'
+Traceback (most recent call last):
+  File "/Users/mashi/Dropbox/00_works/git/mokumoku-kai/small_works/reliability_test_for_stockdata/av_new.py", line 64, in <module>
+    df_av = fetch_from_av(ts, '1min')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mashi/Dropbox/00_works/git/mokumoku-kai/small_works/reliability_test_for_stockdata/av_new.py", line 34, in fetch_from_av
+    from alpha_vantage.techindicators import TechIndicators
+ModuleNotFoundError: No module named 'alpha_vantage'
+Traceback (most recent call last):
+  File "/Users/mashi/Dropbox/00_works/git/mokumoku-kai/small_works/reliability_test_for_stockdata/av_new.py", line 64, in <module>
+    df_av = fetch_from_av(ts, '1min')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mashi/Dropbox/00_works/git/mokumoku-kai/small_works/reliability_test_for_stockdata/av_new.py", line 34, in fetch_from_av
+    from alpha_vantage.techindicators import TechIndicators
+ModuleNotFoundError: No module named 'alpha_vantage'
+Traceback (most recent call last):
+  File "/Users/mashi/Dropbox/00_works/git/mokumoku-kai/small_works/reliability_test_for_stockdata/av_new.py", line 64, in <module>
+    df_av = fetch_from_av(ts, '1min')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mashi/Dropbox/00_works/git/mokumoku-kai/small_works/reliability_test_for_stockdata/av_new.py", line 34, in fetch_from_av
+    from alpha_vantage.techindicators import TechIndicators
+ModuleNotFoundError: No module named 'alpha_vantage'
+Traceback (most recent call last):
+  File "/Users/mashi/Dropbox/00_works/git/mokumoku-kai/small_works/reliability_test_for_stockdata/av_new.py", line 64, in <module>
+    df_av = fetch_from_av(ts, '1min')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mashi/Dropbox/00_works/git/mokumoku-kai/small_works/reliability_test_for_stockdata/av_new.py", line 34, in fetch_from_av
+    from alpha_vantage.techindicators import TechIndicators
+ModuleNotFoundError: No module named 'alpha_vantage'
